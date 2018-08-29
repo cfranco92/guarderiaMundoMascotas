@@ -46,6 +46,85 @@
    </head>
    <body id="page-top">
 
+      <div id="myModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"><b>Crea tu reserva <i>online!</i></b></h4>
+              </div>
+              <div class="modal-body">
+                <div>
+                  <p>Haz tu reserva y nosotros cuidaremos de tu mascota</p>
+                  <p>Déjanos tus datos personales para darte un mejor servicio y muy pronto te contactarémos </p>
+      
+                  <div class="main-action">
+                    <form action="https://formspree.io/informacionmundomascotas@gmail.com" method="POST" accept-charset="UTF-8">
+                      <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                          <div class="form-group ">
+                            <label class="sr-only" for="reserva_nombre">Nombre</label>
+                            <input class="form-control" placeholder="Nombre" type="text" name="Nombre: " id="reserva_nombre" />
+                          </div>
+                          <div class="form-group">
+                            <label class="sr-only" for="reserva_celular">Celular</label>
+                            <input class="form-control" placeholder="Celular" type="tel" name="Celular" id="reserva_celular" />
+                          </div>
+                          <div class="form-group">
+                            <label class="sr-only" for="reserva_correo">Correo</label>
+                            <input placeholder="micorreo@ejemplo.com" class="form-control" required="required" type="email" name="Correo electrónico: " id="reserva_correo" />
+                          </div>
+                        </div>
+      
+      
+                        <div class="col-sm-6 col-xs-12">
+                          <div class="form-group container-fluid">
+                            <p>Fecha de entrada</p>
+                            <input placeholder="Fecha de ingreso" class="form-control"  type="date" name="Fecha de entrada: " id="reserva_fecha_entrada" />
+                            <!-- <script>
+                              $(function() {
+                                $.datepicker.setDefaults($.datepicker.regional["es"]);
+                                $("#reserva_fecha_entrada").datepicker({
+                                  firstDay: 1
+                                });
+                              });
+                            </script> -->
+      
+                              <p>Fecha de salida</p>
+                            <input class="form-control" placeholder="Fecha de salida" type="date" name="Fecha de salida: " id="reserva_fecha_salida" />
+                            <!-- <script>
+                              $(function() {
+                                $.datepicker.setDefaults($.datepicker.regional["es"]);
+                                $("#reserva_fecha_salida").datepicker({
+                                  firstDay: 1
+                                });
+                              });
+                            </script> -->
+                          </div>
+                          <div class="form-group">
+                            <label class="sr-only" for="reserva_info_adicional">Info adicional</label>
+                            <textarea placeholder="Cuéntanos sobre tu mascota" rows="6" style="height: 100px" class="form-control" name="Comentarios de la mascota: " id="reserva_info_adicional">
+        </textarea>
+      
+                          </div>
+      
+                        </div>
+                      </div>
+      
+      
+                  </div>
+                </div>
+                <button type="submit" value="Enviar" class="btn btn-primary" > Enviar </button>
+                </form> <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              </div>
+      
+      
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+
       <!-- Preloader -->
       <div id="preloader">
          <div class="spinner">
@@ -112,10 +191,10 @@
                <div class="col-lg-5 col-md-5">
                      <h3>Información</h3>
                      <ul class="list-inline">
-                        <li><i class="fa fa-envelope"></i><a href="mailto:infomundomascotas@une.net.co">infomundomascotas@une.net.co</a></li>
+                        <li><i class="fa fa-envelope"></i><a href="mailto:informacionmundomascotas@gmail.com">informacionmundomascotas@gmail.com</a></li>
                         <li><i class="fa fa-phone margin-icon"></i>Llámanos +57 (315) 289 43 89</li>
-                        <li><i class="fa fa-map-marker margin-icon"></i>Sabaneta, Antioquia, Carrera 45 # 1 - 23</li>
-                        <li><i class="fa fa-map-marker margin-icon"></i>Rionegro, Antioquia, Carrera 45 # 1 - 23</li>
+                        <li><i class="fa fa-map-marker margin-icon"></i>Sede Sabaneta: Carrera 28 # 71 sur - 110, la doctora.</li>
+                        <li><i class="fa fa-map-marker margin-icon"></i>Sede Llanogrande: Km 2 vía Llanogrande sector Amalita.</li>                        
                      </ul>
                      <!-- address info -->
                      <p>Nos encontramos ubicados en Llanogrande y en Sabaneta.
@@ -161,14 +240,7 @@
             <div id="map-canvas"></div>
          </div>
          <!-- /container-fluid-->
-         <!-- /container-->
-         <div class="container-fluid margin1">
-           <h3>LLANOGRANDE</h3>
-         </div>
-         <div class="container-fluid margin1">
-            <!-- map-->
-            <div id="map-canvas2"></div>
-         </div>
+         <!-- /container-->         
          <!-- /container-fluid-->
       </section>
       <!-- /Section ends -->
@@ -199,6 +271,7 @@
                   <a href="#" title=""><i class="fa fa-facebook"></i></a> -->
                   <!-- <a href="#" title=""><i class="fa fa-google-plus"></i></a> -->
                   <a href="https://www.instagram.com/guarderiamundomascotas/" title=""><i class="fa fa-instagram"></i></a>
+                  <a href="https://api.whatsapp.com/send?phone=573152894389&text=Quiero%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Mundo Mascotas%2c%20gracias.&source=&data=" title=""><i class="fa fa-whatsapp"></i></a>
                </div>
             </div>
             <!-- /.col-md-4 -->
@@ -223,8 +296,7 @@
       <!-- Contact form -->
       <script src="js/contact.js"></script>
       <!-- Google maps -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKwkUGqMJ3ar3Qe4NOLAr1wIM9eEfmnYQ" async defer></script>
-      <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>-->
+      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAqxJghxaHZkoB12UyYcVNs7GN2bLhIGgQ"></script>
       <script src="js/map.js"></script>
       <!--Other Plugins -->
       <script src="js/plugins.js"></script>
