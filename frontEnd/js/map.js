@@ -1,22 +1,25 @@
-   $(document).ready(function () {
+//    $(document).ready(function () {
 
-		   //Google Map
-
-			var mapCanvas = document.getElementById('map-canvas');
+		   
+			
+				var mapCanvas = document.getElementById('map-canvas');
 			var myLatlng = new google.maps.LatLng(6.134460, -75.608177); //your latitude and longitude here
 			var mapOptions = {
-				zoom: 17,
+				zoom: 16,
 				scrollwheel: false,
 				center: myLatlng,
 				styles:[ { "featureType": "administrative.country", "elementType": "geometry.fill", "stylers": [ { "visibility": "on" } ] }, { "featureType": "administrative.country", "elementType": "labels.text.fill", "stylers": [ { "visibility": "on" } ] }, { "featureType": "poi", "elementType": "all", "stylers": [ { "visibility": "off" } ] }, { "featureType": "road", "elementType": "all", "stylers": [ { "visibility": "on" } ] }, { "featureType": "transit", "elementType": "all", "stylers": [ { "visibility": "on" } ] }, { "featureType": "water", "elementType": "all", "stylers": [ { "visibility": "on" } ] } ]
 			}
-			var map = new google.maps.Map(mapCanvas, mapOptions)
+
+				var map = new google.maps.Map(mapCanvas, mapOptions)
 			var marker = new google.maps.Marker({
 				position: myLatlng,
-				icon: 'img/mapmarker.png',
+				icon: '../img/mapmarker.png',
 				map: map,
-				title: ''
+				title: 'Mundo Mascotas'
 			});
+			
+			
 
 
-		});
+		// });
